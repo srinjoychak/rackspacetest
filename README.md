@@ -1,9 +1,9 @@
 # rackspacetest
 
 Exec Process:
-  - Run python <code> for normal execution
-  - Run python <code> -o <offset value> to get matching tz
-  - Run python <code> -m <tz_name> to get specific tz
+- Run ```python <code>``` for normal execution
+- Run ```python <code> -o <offset value>``` to get matching tz
+- Run ```python <code> -m <tz_name>``` to get specific tz
   
 Note: 
   - for matching timezone with value, the user should provide string of length greater than 4. 
