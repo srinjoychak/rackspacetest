@@ -28,7 +28,7 @@ def get_tz_info():
         resp = requests.get(url)
         return resp.json()
     except Exception as e:
-        return None
+        print(e)
 
 def format_tz_info(tz_data):
     temp_l = []
@@ -59,7 +59,7 @@ def match_offset(tz_data,offset):
     return ret(temp_l)
 
 def main():
-    parser = argparse.ArgumentParser(description="run python <code> for normal execution \n Run python <code> -m <tz_name> to get specific tz \n Run python <code> -m <offset value> to get matching tz")
+    parser = argparse.ArgumentParser(description='run python <code> for normal execution \n Run python <code> -m <tz_name> to get specific tz \n Run python <code> -m <offset value> to get matching tz \n For a multiple string input python <code> -m="<offset value> to get matching tz"')
     parser.add_argument("-m","--match", help="Match a TimeZone")
     parser.add_argument("-o", "--offset", help="Get specific offset timezone details")
     args = parser.parse_args()
